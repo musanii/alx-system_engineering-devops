@@ -1,0 +1,27 @@
+When you type "https://www.google.com" into your browser and press Enter, a complex sequence of events is initiated, involving various components of the web stack. In this article, we will discuss each step of the process, from DNS request to database access.
+
+DNS Request
+The first step in the process is the DNS request. Your computer sends a request to a DNS server to translate the human-readable URL "www.google.com" into an IP address that the computer can understand. This is because computers use IP addresses to communicate with each other, whereas humans find it easier to remember domain names.
+
+TCP/IP
+Once the DNS server responds with the IP address of the server that hosts the website, your computer establishes a TCP/IP connection with that server. TCP/IP is a set of protocols that computers use to communicate with each other over the internet.
+
+Firewall
+Before the TCP/IP connection is established, the server may first pass through a firewall. Firewalls act as a barrier between the internet and the server, allowing only authorized traffic to pass through. The firewall may check if the incoming request meets certain criteria, such as if the IP address is on a blacklist or if the request type is blocked.
+
+HTTPS/SSL
+Once the TCP/IP connection is established, the server and your browser establish an HTTPS/SSL encrypted connection. HTTPS stands for Hypertext Transfer Protocol Secure and is a protocol used to secure communication over the internet. SSL stands for Secure Sockets Layer and is the predecessor to the newer TLS (Transport Layer Security) protocol.
+
+Load Balancer
+After the encrypted connection is established, the request is passed through a load balancer. A load balancer is a device or software that distributes incoming network traffic across multiple servers to prevent overload on any one server. The load balancer may use algorithms to determine which server to route the request to, such as round-robin, least connections, or IP hash.
+
+Web Server
+Once the load balancer determines which server to route the request to, the request is passed to a web server. The web server's role is to handle HTTP requests, such as serving static files or running dynamic applications.
+
+Application Server
+If the request requires dynamic content, such as a search query or user profile, it is passed from the web server to an application server. The application server executes the necessary code and returns the results to the web server.
+
+Database
+If the request requires data from a database, the application server queries the database and returns the results to the web server, which sends the data back to your browser.
+
+In conclusion, typing "https://www.google.com" into your browser and pressing Enter initiates a complex series of events, from DNS request to database access. Understanding each step in this process is crucial for software engineers who work on web applications or network infrastructure.
